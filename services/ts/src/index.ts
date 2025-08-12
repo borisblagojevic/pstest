@@ -1,61 +1,15 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import express from 'express';
 
-dotenv.config({path: '../../.env'});
+import moviesRoutes from "./routes/MoviesRoutes";
 
-const {Sequelize, DataTypes} = require("sequelize");
+const PORT = process.env.NODE_PORT || 5000;
 
-const sequelize = new Sequelize(
-    process.env.POSTGRES_DB_NAME,
-    process.env.POSTGRES_USERNAME,
-    process.env.POSTGRES_PASSWORD,
-    {
-        host: process.env.POSTGRES_HOST,
-        port: process.env.POSTGRES_PORT,
-        dialect: 'postgres',
-        pool: {
-            max: 5,
-            min: 0,
-            acquire: 30000,
-            idle: 10000
-        }
-    }
-);
+const app = express();
 
-async function test() {
+app.use(express.json());
+app.use(moviesRoutes);
 
-    try {
-        await sequelize.authenticate();
+app.listen(PORT, () => console.info(`Server listening on port: ${PORT}`));
 
-        console.log("Sequelize authenticated successfully.");
-    } catch (error) {
-        console.error(error);
-    }
-
-    const Actor = sequelize.define("actor", {
-        actor_id: {
-          type: DataTypes.INTEGER,
-          primaryKey: true
-        },
-        first_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        last_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        last_update: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-    },
-        {
-            sequelize,
-        });
-    console.log(Actor === sequelize.models.Actor);
-
-
-}
-
-test();
+// testConnection(); //TODO: test only
