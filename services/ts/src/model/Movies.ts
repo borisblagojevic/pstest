@@ -1,14 +1,18 @@
 import {sequelize} from "./SequelizePool";
-import {DataTypes} from "sequelize";
+import {DataTypes, Op} from "sequelize";
+import {NextFunction, Request, Response} from "express";
+import {Language} from "./Language";
+
 
 // film_id | title | description | release_year | language_id | rental_duration | rental_rate | length | replacement_cost | rating | last_update | special_features
 
-const Film = sequelize.define(
+export const Film = sequelize.define(
     "film",
     {
         film_id: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         title: {
             type: DataTypes.STRING,
@@ -57,17 +61,34 @@ const Film = sequelize.define(
     {
         // @ts-ignore
         sequelize,
-        freezeTableName:
-            true
+        freezeTableName: true
     }
 );
 
-export const getPageFilm = async () : Promise<void> => {
- const films = await Film.findAll({
-     attributes: ['film_id', 'title', 'last_update'],
-        offset: 0,
-        limit: 10
- });
+Film.hasOne(Language, {foreignKey: 'language_id'});
+Language.belongsTo(Film);
 
-    console.log(films); // TODO
+export const getPageFilm = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    res.locals.data = await Film.findAll({
+        attributes: ['film_id', 'title', 'last_update'],
+        limit: res.locals.limit,
+        where: {
+            film_id: {
+                [Op.gte]: res.locals.cursor
+            }
+        }
+    });
+
+    next();
+}
+
+export const getMovieById = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    res.status(200).json(await Film.findOne({
+        // attributes: ['film_id', 'title', 'description', 'release_year', 'language_id', 'rental_duration', 'rental_rate', 'length', 'replacement_cost', 'rating', 'last_update','special_features'],
+        attributes: ['film_id','language_id',],
+        where:{
+            film_id: req.params.film_id
+        },
+        include: Language
+    }));
 }

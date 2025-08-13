@@ -6,7 +6,7 @@ const Actor = sequelize.define(
     {
         actor_id: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
         },
         first_name: {
             type: DataTypes.STRING,
