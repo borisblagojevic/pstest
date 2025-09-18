@@ -1,0 +1,15 @@
+{
+  "name": "posts",
+  "version": "1.0.0",
+  "description": "json server data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx json-server src/db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "borisblagojevic",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

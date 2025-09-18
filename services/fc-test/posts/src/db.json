@@ -1,0 +1,304 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Exploring the Digital Frontier",
+      "description": "A deep dive into the latest trends shaping the future of technology and online communities.",
+      "isFavorite": true
+    },
+    {
+      "id": 2,
+      "title": "The Art of Coffee Brewing",
+      "description": "From bean to cup, this guide covers the essentials of making the perfect brew at home.",
+      "isFavorite": false
+    },
+    {
+      "id": 3,
+      "title": "Fitness for Beginners: A 30-Day Plan",
+      "description": "A structured program designed to help you start your fitness journey safely and effectively.",
+      "isFavorite": true
+    },
+    {
+      "id": 4,
+      "title": "Budgeting Made Easy",
+      "description": "Simple tips and tricks to help you get your finances in order and start saving money.",
+      "isFavorite": false
+    },
+    {
+      "id": 5,
+      "title": "Gardening in Small Spaces",
+      "description": "Don't have a yard? Learn how to grow your own vegetables and herbs on a balcony or patio.",
+      "isFavorite": false
+    },
+    {
+      "id": 6,
+      "title": "Mastering Python for Data Science",
+      "description": "An introduction to the libraries and tools you need to become a data science expert.",
+      "isFavorite": true
+    },
+    {
+      "id": 7,
+      "title": "Creative Writing Prompts",
+      "description": "50 unique ideas to help you overcome writer's block and spark your next great story.",
+      "isFavorite": false
+    },
+    {
+      "id": 8,
+      "title": "The History of the Internet",
+      "description": "A brief overview of how the world wide web came to be and its impact on society.",
+      "isFavorite": false
+    },
+    {
+      "id": 9,
+      "title": "Home Renovation: DIY Tips",
+      "description": "Practical advice for tackling your own home improvement projects, big or small.",
+      "isFavorite": true
+    },
+    {
+      "id": 10,
+      "title": "Photography Basics: Composition",
+      "description": "Learn the rules of composition to take more engaging and visually appealing photos.",
+      "isFavorite": true
+    },
+    {
+      "id": 11,
+      "title": "Mindful Meditation Techniques",
+      "description": "Discover simple meditation practices to reduce stress and improve focus.",
+      "isFavorite": false
+    },
+    {
+      "id": 12,
+      "title": "Healthy Recipes for a Busy Week",
+      "description": "Quick and nutritious meals that you can prepare even on your busiest days.",
+      "isFavorite": true
+    },
+    {
+      "id": 13,
+      "title": "The Ultimate Gaming PC Build",
+      "description": "A step-by-step guide to assembling your own high-performance gaming rig.",
+      "isFavorite": false
+    },
+    {
+      "id": 14,
+      "title": "Exploring National Parks",
+      "description": "A travel guide to some of the most breathtaking national parks around the world.",
+      "isFavorite": true
+    },
+    {
+      "id": 15,
+      "title": "Introduction to Blockchain",
+      "description": "Demystifying the technology behind cryptocurrencies and its potential applications.",
+      "isFavorite": false
+    },
+    {
+      "id": 16,
+      "title": "A Guide to Indoor Plants",
+      "description": "How to care for common houseplants and make your living space greener.",
+      "isFavorite": true
+    },
+    {
+      "id": 17,
+      "title": "The Science of Sleep",
+      "description": "Understanding sleep cycles and how to improve your sleep quality.",
+      "isFavorite": false
+    },
+    {
+      "id": 18,
+      "title": "Learning to Play the Guitar",
+      "description": "A simple guide for beginners, from holding the guitar to playing your first chord.",
+      "isFavorite": true
+    },
+    {
+      "id": 19,
+      "title": "Building a Personal Brand Online",
+      "description": "Strategies for creating and marketing your personal brand on social media.",
+      "isFavorite": false
+    },
+    {
+      "id": 20,
+      "title": "Cybersecurity for Everyday Users",
+      "description": "Essential tips to protect your personal information and devices from online threats.",
+      "isFavorite": false
+    },
+    {
+      "id": 21,
+      "title": "Understanding Artificial Intelligence",
+      "description": "A non-technical explanation of AI, machine learning, and their real-world uses.",
+      "isFavorite": true
+    },
+    {
+      "id": 22,
+      "title": "The Best Podcasts of 2024",
+      "description": "A curated list of must-listen podcasts across various genres and topics.",
+      "isFavorite": false
+    },
+    {
+      "id": 23,
+      "title": "Sustainable Living: Simple Switches",
+      "description": "Easy ways to make your daily habits more environmentally friendly.",
+      "isFavorite": false
+    },
+    {
+      "id": 24,
+      "title": "Exploring the World of Fungi",
+      "description": "A fascinating look at the diverse and often mysterious kingdom of mushrooms.",
+      "isFavorite": true
+    },
+    {
+      "id": 25,
+      "title": "How to Write a Resume",
+      "description": "Crafting a professional and compelling resume that stands out to employers.",
+      "isFavorite": false
+    },
+    {
+      "id": 26,
+      "title": "The Basics of Web Development",
+      "description": "An introductory guide to HTML, CSS, and JavaScript for aspiring developers.",
+      "isFavorite": true
+    },
+    {
+      "id": 27,
+      "title": "Beginner's Guide to Birdwatching",
+      "description": "How to identify local birds and enjoy a new, relaxing hobby.",
+      "isFavorite": false
+    },
+    {
+      "id": 28,
+      "title": "Starting a Small Business",
+      "description": "From business plan to launch, a comprehensive checklist for new entrepreneurs.",
+      "isFavorite": false
+    },
+    {
+      "id": 29,
+      "title": "Cooking with Spices",
+      "description": "Unlock the flavors of your favorite spices and elevate your cooking.",
+      "isFavorite": true
+    },
+    {
+      "id": 30,
+      "title": "The Power of Positive Thinking",
+      "description": "Practical steps to cultivate an optimistic mindset and improve your well-being.",
+      "isFavorite": false
+    },
+    {
+      "id": 31,
+      "title": "Astronomy for Amateurs",
+      "description": "Everything you need to know to start stargazing with or without a telescope.",
+      "isFavorite": true
+    },
+    {
+      "id": 32,
+      "title": "Classic Literature You Must Read",
+      "description": "A list of timeless books that have shaped history and culture.",
+      "isFavorite": false
+    },
+    {
+      "id": 33,
+      "title": "The Benefits of Regular Exercise",
+      "description": "Beyond weight loss: a look at all the ways exercise improves your life.",
+      "isFavorite": true
+    },
+    {
+      "id": 34,
+      "title": "Exploring the World of Anime",
+      "description": "A beginner's guide to the most popular anime genres and series.",
+      "isFavorite": false
+    },
+    {
+      "id": 35,
+      "title": "The Secret Life of Bees",
+      "description": "Understanding the vital role bees play in our ecosystem and how to protect them.",
+      "isFavorite": true
+    },
+    {
+      "id": 36,
+      "title": "Digital Art for Beginners",
+      "description": "Learn the tools and techniques to create beautiful digital illustrations.",
+      "isFavorite": false
+    },
+    {
+      "id": 37,
+      "title": "How to Plan an Epic Road Trip",
+      "description": "Tips for mapping out your route, packing, and making the most of your journey.",
+      "isFavorite": false
+    },
+    {
+      "id": 38,
+      "title": "Investing for Millennials",
+      "description": "A simple guide to building wealth for young adults, from stocks to real estate.",
+      "isFavorite": true
+    },
+    {
+      "id": 39,
+      "title": "The Fundamentals of Drawing",
+      "description": "Mastering the basics of line, shape, and form to improve your artistic skills.",
+      "isFavorite": false
+    },
+    {
+      "id": 40,
+      "title": "Exploring a Career in Tech",
+      "description": "A roadmap for transitioning into the technology industry, no matter your background.",
+      "isFavorite": true
+    },
+    {
+      "id": 41,
+      "title": "Urban Exploration: Finding Adventure",
+      "description": "A guide to discovering hidden gems and overlooked spots in your own city.",
+      "isFavorite": false
+    },
+    {
+      "id": 42,
+      "title": "The Psychology of Color",
+      "description": "How different colors influence our emotions and behavior.",
+      "isFavorite": true
+    },
+    {
+      "id": 43,
+      "title": "Building a Home Smart System",
+      "description": "Connecting your devices to create a more efficient and automated living space.",
+      "isFavorite": false
+    },
+    {
+      "id": 44,
+      "title": "The History of Rock 'n' Roll",
+      "description": "From its roots in the blues to its global impact, the story of a musical revolution.",
+      "isFavorite": false
+    },
+    {
+      "id": 45,
+      "title": "Personal Finance Management",
+      "description": "Essential strategies for tracking expenses, managing debt, and planning for the future.",
+      "isFavorite": true
+    },
+    {
+      "id": 46,
+      "title": "A Guide to Sustainable Fashion",
+      "description": "Making conscious choices about your clothing to reduce your environmental footprint.",
+      "isFavorite": false
+    },
+    {
+      "id": 47,
+      "title": "The Art of Public Speaking",
+      "description": "Overcome your fear and deliver powerful, engaging presentations.",
+      "isFavorite": false
+    },
+    {
+      "id": 48,
+      "title": "Understanding the Stock Market",
+      "description": "A straightforward explanation of how the stock market works for novice investors.",
+      "isFavorite": true
+    },
+    {
+      "id": 49,
+      "title": "Building a Blog from Scratch",
+      "description": "Everything you need to know to launch your own successful blog.",
+      "isFavorite": false
+    },
+    {
+      "id": 50,
+      "title": "The Science of Happiness",
+      "description": "Exploring what truly makes us happy and how to cultivate joy in our lives.",
+      "isFavorite": true
+    }
+  ]
+}
