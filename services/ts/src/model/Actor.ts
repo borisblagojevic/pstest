@@ -1,11 +1,13 @@
 import {sequelize} from './SequelizePool';
-import {DataTypes} from 'sequelize';
+import {DataTypes, Op} from 'sequelize';
+import {NextFunction, Request, Response} from "express";
 
 const Actor = sequelize.define(
     "actor",
     {
         actor_id: {
             type: DataTypes.INTEGER,
+            autoIncrement: true,
             primaryKey: true,
         },
         first_name: {
@@ -18,18 +20,52 @@ const Actor = sequelize.define(
         },
         last_update: {
             type: DataTypes.DATE,
-            allowNull: false
         },
+        full_name: {
+            type: DataTypes.VIRTUAL,
+            get() {
+                // @ts-ignore
+                return `${this.first_name} ${this.last_name}`;
+            }
+        }
     },
     {
         // @ts-ignore
         sequelize,
-        freezeTableName: true
+        freezeTableName: true,
+        timestamps: false
     });
 
-//     const actors = await Actor.findAll({
-//         attributes: ['first_name', 'last_name'],
-//         offset: 0,
-//         limit: 10
-// });
-// console.log(JSON.stringify(actors));
+export const getPageActor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    res.locals.data = await Actor.findAll({
+        attributes: ['actor_id', 'first_name', 'last_name', 'full_name'],
+        limit: res.locals.limit,
+        where: {
+            actor_id: {
+                [Op.gte]: res.locals.cursor
+            }
+        }
+    });
+
+    next();
+}
+
+export const getActor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    res.locals.data = await Actor.findAll({where: {actor_id: {[Op.gte]: req.params.id}}});
+
+    next();
+}
+
+export const createActor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const a = await Actor.create({first_name: req.body.first_name, last_name: req.body.last_name});
+
+    res.status(201).send({"success": true, data: a});
+}
+
+export const deleteActor = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    const a = await Actor.destroy({where: {actor_id: {[Op.gte]: req.params.id}}});
+
+    res.locals.data = a;
+
+    next();
+}

@@ -61,7 +61,8 @@ export const Film = sequelize.define(
     {
         // @ts-ignore
         sequelize,
-        freezeTableName: true
+        freezeTableName: true,
+        timestamps: false
     }
 );
 
