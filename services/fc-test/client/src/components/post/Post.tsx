@@ -1,5 +1,5 @@
 import type {FC} from "react";
-import Button from "../../Button.tsx";
+import Button from "../button/Button.tsx";
 
 interface IPostProps {
     id: string,
