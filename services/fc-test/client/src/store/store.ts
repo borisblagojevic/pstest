@@ -1,9 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import buttonReducer from '../components/button/buttonSlice.ts';
+import postReducer from '../components/post/postsSlice.ts'
+import {searchSlice} from "../components/search/searchSlice.ts";
 
 export const store = configureStore({
     reducer: {
         button: buttonReducer,
+        posts: postReducer,
+        // @ts-ignore
+        searches: searchSlice
     },
 })
 

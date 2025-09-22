@@ -1,14 +1,14 @@
 import type {FC} from "react";
 import Button from "../button/Button.tsx";
 
-interface IPostProps {
+export interface IPost {
     id: string,
     title: string,
     description: string,
     isFavorite: boolean,
 }
 
-const Post: FC<IPostProps> = ({id, title, description, isFavorite}) =>
+const Post: FC<IPost> = ({id, title, description, isFavorite}) =>
 {
     return <div className={"border-2 rounded-lg p-3 border-indigo-500 text-indigo-500 w-2/4"} key={`post-${id}-${title}`}>
         <div className={"flex flex-row justify-between items-center pb-4"}>
