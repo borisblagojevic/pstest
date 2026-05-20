@@ -23,6 +23,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USERNAME}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB_NAME}
+    stdin_open: true
     ports:
       - ${POSTGRES_PORT}:${POSTGRES_PORT}
     volumes:
