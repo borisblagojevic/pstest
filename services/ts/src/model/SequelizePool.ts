@@ -6,8 +6,8 @@ export const sequelize = new Sequelize(
     process.env.POSTGRES_USERNAME,
     process.env.POSTGRES_PASSWORD,
     {
-        // host: process.env.POSTGRES_HOST,
-        host: 'db',
+        host: process.env.POSTGRES_HOST,
+        // host: 'db',
         port: process.env.POSTGRES_PORT,
         dialect: 'postgres',
         pool: {

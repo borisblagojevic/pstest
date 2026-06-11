@@ -8,6 +8,15 @@ type Coordinate struct {
 	Lat, Long float64
 }
 
+type Person struct {
+	FName string
+	LName string
+}
+
+func (p Person) fullName() string {
+	return "Hi my name is " + p.FName + " " + p.LName
+}
+
 func main() {
 	var m map[string]string
 	m = make(map[string]string)
@@ -27,4 +36,7 @@ func main() {
 		"Location B": Coordinate{23.45453, 32.12341}}
 
 	fmt.Println(mLit)
+
+	v := Person{"Tom", "Green"}
+	fmt.Println(v.fullName())
 }

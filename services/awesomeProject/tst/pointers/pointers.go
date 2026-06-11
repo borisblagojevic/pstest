@@ -33,9 +33,8 @@ func main() {
 	fmt.Println(increaseAgeWPointers(&age))
 	fmt.Println(age)
 
-	var p *int
-	fmt.Println(p)
+	var p *int = new(int)
 
-	p =
-		fmt.Println(p)
+	*p = age + *ageP
+	fmt.Println(*p)
 }

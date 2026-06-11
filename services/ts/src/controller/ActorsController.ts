@@ -26,8 +26,6 @@ export const handlePageRes = async (req: Request, res: Response, next: NextFunct
 }
 
 export const handleCreateReq = async (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body)
-
     switch (req.body.first_name) {
         case null:
         case undefined:

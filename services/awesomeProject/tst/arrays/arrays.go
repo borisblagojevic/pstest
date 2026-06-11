@@ -32,4 +32,5 @@ func main() {
 	for i, v := range fibonacciSequence {
 		fmt.Print("%d = %d\n", i, v)
 	}
+
 }
